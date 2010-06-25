@@ -191,7 +191,16 @@ SC.LabelView = SC.View.extend(SC.Control,
     
   */
   doubleClick: function( evt ) { return this.beginEditing(); },
-  
+
+  /**
+	Alias touchStart to doubleClick, so that touch devices 
+	can also edit labels
+      
+	@param {DOMMouseEvent} evt DOM event
+    
+  */
+  touchStart: function(evt) { return this.doubleClick(evt); },
+
   
   /**
     Opens the inline text editor (closing it if it was already open for 
