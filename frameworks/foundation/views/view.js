@@ -1219,7 +1219,11 @@ SC.View = SC.Responder.extend(SC.DelegateSupport,
     }
     
     len = childViews.length ;
-    for (idx=0; idx<len; ++idx) childViews[idx]._notifyWillDestroyLayer() ;
+    for (idx=0; idx<len; ++idx){
+       	if(childViews[idx]._notifyWillDestroyLayer){
+			childViews[idx]._notifyWillDestroyLayer();
+        } 
+    }
     
     this.set('layer', null) ;
   },
