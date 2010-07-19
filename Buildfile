@@ -97,7 +97,7 @@ config :core_tools, :required => [:desktop, :datastore, :animation, :forms]
 
 %w(tests test_controls docs welcome).each do |app_target|
   config app_target, 
-    :required => [:desktop, :core_tools],
+    :required => [:desktop, :datastore, :core_tools],
     :theme => :ace
     
   # mode :debug do
