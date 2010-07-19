@@ -647,7 +647,7 @@ SC.TextFieldView = SC.FieldView.extend(SC.StaticLayout, SC.Editable,
     this.beginEditing(evt);
     
     // handle touch intercept
-    if (this.get("pane").get("usingTouchIntercept")) {
+    if (this.get("pane") && this.get("pane").get("usingTouchIntercept")) {
       this.get("pane").hideTouchIntercept();
     }
   },
@@ -656,7 +656,7 @@ SC.TextFieldView = SC.FieldView.extend(SC.StaticLayout, SC.Editable,
     this.commitEditing(evt);
     
     // handle touch intercept
-    if (this.get("pane").get("usingTouchIntercept")) {
+    if (this.get("pane") && this.get("pane").get("usingTouchIntercept")) {
       this.get("pane").showTouchIntercept();
     }
   },
