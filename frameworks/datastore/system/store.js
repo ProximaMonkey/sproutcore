@@ -865,7 +865,6 @@ SC.Store = SC.Object.extend( /** @scope SC.Store.prototype */ {
   
   
   _findQuery: function(query, createIfNeeded, refreshIfNew) {
-
     // lookup the local RecordArray for this query.
     var cache = this._scst_recordArraysByQuery, 
         key   = SC.guidFor(query),
@@ -890,9 +889,7 @@ SC.Store = SC.Object.extend( /** @scope SC.Store.prototype */ {
   },
   
   _findRecord: function(recordType, id) {
-
     var storeKey ; 
-    
     // if a record instance is passed, simply use the storeKey.  This allows 
     // you to pass a record from a chained store to get the same record in the
     // current store.
